@@ -146,6 +146,8 @@ function getModule(
       return import('./wallets/bitpie')
     case 'gnosis':
       return import('./wallets/gnosis')
+    case 'arkane':
+      return import('./wallets/arkane')
     default:
       throw new Error(`${name} is not a valid walletName.`)
   }

@@ -694,7 +694,16 @@ export function validateWalletInit(
       'rpcUri',
       'webUri',
       'xsUri',
-      'blockedPopupRedirect'
+      'blockedPopupRedirect',
+      'blockedPopupRedirect',
+      'clientId',
+      'environment',
+      'signMethod',
+      'windowMode',
+      'bearerTokenProvider',
+      'authenticationOptions',
+      'skipAuthentication',
+      'secretType'
     ],
     'walletInitObject'
   )

@@ -1,3 +1,4 @@
+import type { ArkaneSubProviderOptions } from '@arkane-network/web3-arkane-provider'
 export interface Initialization {
   dappId?: string
   networkId: number
@@ -357,6 +358,9 @@ export interface InjectedWithBalanceOptions extends CommonWalletOptions {
   rpcUrl?: string
 }
 
+export type ArkaneOptions = CommonWalletOptions &
+  ArkaneSubProviderOptions & { isMobile: boolean }
+
 export type WalletInitOptions =
   | CommonWalletOptions
   | SdkWalletOptions
@@ -365,6 +369,7 @@ export type WalletInitOptions =
   | TrezorOptions
   | LatticeOptions
   | AuthereumOptions
+  | ArkaneOptions
   | LedgerOptions
   | InjectedWithBalanceOptions
 
@@ -375,6 +380,7 @@ export type AllWalletInitOptions = CommonWalletOptions &
   TrezorOptions &
   LatticeOptions &
   AuthereumOptions &
+  ArkaneOptions &
   LedgerOptions &
   WalletLinkOptions &
   InjectedWithBalanceOptions & { networkId: number } & { isMobile: boolean }

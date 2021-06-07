@@ -53,6 +53,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "@arkane-network/web3-arkane-provider": "^0.23.0",
     "@cvbb/eth-keyring": "^1.1.0",
     "@gnosis.pm/safe-apps-provider": "^0.3.0",
     "@gnosis.pm/safe-apps-sdk": "^2.3.0",
@@ -79,7 +80,7 @@
     "web3-provider-engine": "^15.0.4"
   },
   "resolutions": {
-    "authereum/web3-utils/underscore": "^1.12.1",
+    "authereum/web3-utils": "^1.3.6",
     "authereum/ethers/elliptic": "^6.5.3",
     "@portis/web3/pocket-js-core/axios": "^0.21.1"
   }

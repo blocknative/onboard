@@ -85,6 +85,7 @@ export default {
     'web3-provider-engine/subproviders/filters',
     'eth-provider',
     '@gnosis.pm/safe-apps-sdk',
-    '@gnosis.pm/safe-apps-provider'
+    '@gnosis.pm/safe-apps-provider',
+    '@arkane-network/web3-arkane-provider'
   ]
 }
