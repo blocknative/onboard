@@ -285,6 +285,10 @@ export function getProviderName(provider: any): string | undefined {
     return 'Bitpie'
   }
 
+  if (provider.isSparrow) {
+    return 'Sparrow'
+  }
+
   // =====================================
   // When adding new wallet place above this metamask check as some providers
   // have an isMetaMask property in addition to the wallet's own `is[WalletName]`

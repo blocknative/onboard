@@ -146,6 +146,8 @@ function getModule(name: string): Promise<{
       return import('./wallets/bitpie')
     case 'gnosis':
       return import('./wallets/gnosis')
+    case 'sparrow':
+      return import('./wallets/sparrow')
     default:
       throw new Error(`${name} is not a valid walletName.`)
   }
