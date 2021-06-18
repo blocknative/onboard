@@ -285,6 +285,10 @@ export function getProviderName(provider: any): string | undefined {
     return 'Bitpie'
   }
 
+  if (provider.IsTp) {
+    return 'tp'
+  }
+
   // =====================================
   // When adding new wallet place above this metamask check as some providers
   // have an isMetaMask property in addition to the wallet's own `is[WalletName]`
