@@ -11,6 +11,7 @@ import { getProviderName } from '../../utilities'
 const desktopDefaultWalletNames = [
   'detectedwallet',
   'metamask',
+  'binance',
   'frame',
   'torus',
   'opera',
@@ -168,6 +169,8 @@ function getModule(name: string): Promise<{
       return import('./wallets/bitpie')
     case 'gnosis':
       return import('./wallets/gnosis')
+    case 'binance':
+      return import('./wallets/binance-chain-wallet')
     case 'detectedwallet':
       return import('./wallets/detectedwallet')
     default:
