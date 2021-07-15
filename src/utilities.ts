@@ -312,46 +312,20 @@ export function getDeviceInfo() {
 }
 
 export function networkName(id: number): string {
-  switch (id) {
-    case 1:
-      return 'mainnet'
-    case 3:
-      return 'ropsten'
-    case 4:
-      return 'rinkeby'
-    case 5:
-      return 'goerli'
-    case 42:
-      return 'kovan'
-    case 100:
-      return 'xdai'
-    case 56:
-      return 'bsc'
-    default:
-      const { networkId, networkName } = get(app)
-      return (networkId === id && networkName) || 'unknown'
-  }
-}
-
-export function networkToId(network: string): number {
-  switch (network) {
-    case 'mainnet':
-      return 1
-    case 'ropsten':
-      return 3
-    case 'rinkeby':
-      return 4
-    case 'goerli':
-      return 5
-    case 'kovan':
-      return 42
-    case 'xdai':
-      return 100
-    case 'bsc':
-      return 56
-    default:
-      return 0
-  }
+  const { networkName, networkId } = get(app)
+  return networkId === id && networkName
+    ? networkName
+    : (
+        {
+          1: 'mainnet',
+          3: 'ropsten',
+          4: 'rinkeby',
+          5: 'goerli',
+          42: 'kovan',
+          100: 'xdai',
+          56: 'bsc'
+        } as { [key: number]: string }
+      )[id] || 'unknown'
 }
 
 export function wait(time: number) {
